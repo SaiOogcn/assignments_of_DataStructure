@@ -11,6 +11,8 @@ j = 0
 while i < len(shorter) and j < len(longer):
     if shorter[i] == longer[j]:
         i += 1
+    else:
+        i = 0
     j += 1
 
 if i == len(shorter):

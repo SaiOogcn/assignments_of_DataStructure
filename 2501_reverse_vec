@@ -1,0 +1,12 @@
+class Seqlist:
+    def __init__(self,data):
+        self.array = data[:]
+
+def reverse_vec(L):
+    left = 0
+    right = len(L.array) - 1
+    while left < right:
+        L.array[left], L.array[right] = L.array[right], L.array[left]
+        left += 1
+        right -= 1
+
