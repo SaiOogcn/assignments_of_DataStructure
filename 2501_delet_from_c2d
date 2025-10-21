@@ -1,18 +1,18 @@
 class Seqlist:
-    def __init__(self,data)
+    def __init__(self,data):
         self.array = data[:]
         self.length = len(data)
-def Del_between(L,c,d)
-    if L.length = 0
+def Del_between(L,c,d):
+    if L.length == 0:
         return
     i = 0
-    while i < L.length and L.array[i] < c
+    while i < L.length and L.array[i] < c:
         i += 1
     j = 0
-    while j < L.length and L.array[j] <= d
+    while j < L.length and L.array[j] <= d:
         j += 1
     k = i
-    while j <= L.length
+    while j <= L.length:
         L.array[k] = L.array[j]
         k += 1
         j += 1
