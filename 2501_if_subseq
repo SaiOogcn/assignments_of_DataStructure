@@ -1,0 +1,2 @@
+def if_subseq(A,B):
+    if len(B)
