@@ -1,0 +1,24 @@
+#include <iostream>
+#include <string>
+#include <sstream>
+using namespace std;
+
+int main(){
+    int m;
+    cin >> m;
+    int* data = new int[m];
+    int top2 = -1;
+    int top1 = m;
+    string input;
+    getline(cin,input);
+    istringstream iss(input);
+    int a;
+    while(iss>>a){
+        if (top2 + 1 == top1)
+        break;
+        if (a % 2 == 0)
+        data[++top2] == a;
+        else
+        data[--top1] == a;
+    }
+}
