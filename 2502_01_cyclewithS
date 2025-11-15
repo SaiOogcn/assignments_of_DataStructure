@@ -1,0 +1,3 @@
+S->next = rear->next;
+rear->next = S;
+rear = S;

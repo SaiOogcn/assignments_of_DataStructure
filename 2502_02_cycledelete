@@ -1,0 +1,6 @@
+if (rear->next->next == rear)
+return 1;
+p = rear->next->next;
+rear->next->next = p->next;
+delete p;
+return

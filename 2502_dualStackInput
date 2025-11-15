@@ -6,6 +6,7 @@ using namespace std;
 int main(){
     int m;
     cin >> m;
+    cin.ignore();
     int* data = new int[m];
     int top2 = -1;
     int top1 = m;
@@ -14,11 +15,16 @@ int main(){
     istringstream iss(input);
     int a;
     while(iss>>a){
-        if (top2 + 1 == top1)
-        break;
+        if (top2 + 1 == top1){
+        delete[] data;
+        return 0;
+        }
+
         if (a % 2 == 0)
-        data[++top2] == a;
+        data[++top2] = a;
         else
-        data[--top1] == a;
+        data[--top1] = a;
     }
+    delete[] data;
+    return 0;
 }
